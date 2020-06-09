@@ -13,7 +13,7 @@ public class PessoaTest {
 		PessoaDAO pessoaDAO = new PessoaDAO();
 	
 		//Pessoa pessoa = new Pessoa(null, "Teste", "teste3@teste.com", "1234asdf", LocalDate.of(2000, 5, 10));
-		//Pessoa pessoa = new Pessoa(null, "Teste3", "teste5@teste.com", "1234asdf", LocalDate.of(2000, 5, 10));
+		//Pessoa pessoa = new Pessoa(null, "Teste3", "teste8@teste.com", "1234asdf", LocalDate.of(2000, 5, 10));
 		
 		//pessoaDAO.save(pessoa);
 				
