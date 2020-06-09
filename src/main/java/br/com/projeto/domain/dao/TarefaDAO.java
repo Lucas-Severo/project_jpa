@@ -36,7 +36,7 @@ public class TarefaDAO {
 		return tarefa;
 	}
 	
-	public Tarefa remove(Long id) {
+	public Tarefa remove(Long pessoa_id, Long id) {
 		EntityManager entityManager = new ConnectionEntityManager().getConnection();
 	
 		Tarefa tarefa = null;
@@ -47,8 +47,11 @@ public class TarefaDAO {
 			
 			entityManager.getTransaction().begin();
 			
-			if(tarefa != null) {
+			if(tarefa != null && tarefa.getPessoa().getId() == pessoa_id) {
 				entityManager.remove(tarefa);
+				System.out.println("\nTarefa removida com sucesso!\n");
+			} else {
+				System.err.println("\nErro ao excluir tarefa\n");
 			}
 			
 			entityManager.getTransaction().commit();

@@ -90,7 +90,7 @@ public class PessoaDAO {
 			pessoa = (Pessoa) pessoaQuery.getResultList().get(0);
 			
 		} catch (Exception err) {
-			err.printStackTrace();
+			System.out.println(err.getMessage());
 		} finally {
 			entityManager.close();
 		}

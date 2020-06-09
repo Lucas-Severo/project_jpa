@@ -155,11 +155,8 @@ public class App
 	        			System.out.print("Id: ");
 	        			
 	        			id = sc.nextLong();
-	        			Tarefa tarefa = tarefaDAO.remove(id);
-	        			
-	        			if(tarefa != null) {
-	        				System.out.println("\nTarefa removida com sucesso!\n");
-	        			}
+	        			Tarefa tarefa = tarefaDAO.remove(pessoa.getId(), id);
+	        		
 	        		} else if(opc == 4) {
 	        			System.out.println("\nMostrar a tarefa pela prioridade\n");
 	        			
@@ -191,5 +188,7 @@ public class App
 	        	}
 	        }
         }
+        
+        sc.close();
    }
 }
